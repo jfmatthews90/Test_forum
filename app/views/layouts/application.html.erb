@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TestForum</title>
+    <title>Website built on Bootstrap Template</title>
     <%= csrf_meta_tags %>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://blackrockdigital.github.io/startbootstrap-landing-page/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://blackrockdigital.github.io/startbootstrap-landing-page/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Custom styles for this template -->
+    <link href="https://blackrockdigital.github.io/startbootstrap-landing-page/css/landing-page.css" rel="stylesheet">
+
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -15,19 +26,61 @@
 
   <body>
 
-  	<nav>
-		  <ul>
-		    <li>Home</li>
-		    <li>About</li>
-		    <li>Contact</li>
-		  </ul>
-		</nav>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">John Smith - Business Analyst</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/static_pages/about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/static_pages/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
 
     <%= yield %>
 
+
+    <!-- Footer -->
     <footer>
-		  &copy; 2017 Test Forum - All Rights Reserved
-		</footer>
+      <div class="container">
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="/static_pages/about">About</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="#services">Services</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="/static_pages/contact">Contact</a>
+          </li>
+        </ul>
+        <p class="copyright text-muted small">Copyright &copy; Your Company 2017. All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
   </body>
 </html>
